@@ -1,0 +1,20 @@
+body {
+    background-image: url("http://www.anypics.ru/pic/201210/2560x1600/anypics.ru-21098.jpg");
+}
+
+p {
+    color: white;
+}
+
+input {
+    border-radius: 15px;
+}
+
+li {
+      border: 3px solid #B49EA1;
+      border-radius: 10px;
+      width: 40%;
+      margin: 10px;
+      padding: 10px;
+      list-style-type: none;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8" http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Vika Novokhatskaya</title>
+    <link href=\'http://fonts.googleapis.com/css?family=Roboto:300&amp;subset=cyrillic-ext,cyrillic\'
+          rel=\'stylesheet\'
+          type=\'text/css\'>
+    <link href="main.css" rel="stylesheet" type="text/css"/>
+    <link href="icons.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+
+        table.productsTable {
+        width: 40%;
+        border-spacing: 5px;
+        border-style: outset;
+        border-color: gray;
+        border-collapse: separate;
+        background-color: white;
+        }
+
+        table.productsTable td {
+        border-width: 1px;
+        text-align: center;
+        border-style: inset;
+        border-color: gray;
+        background-color: white;
+        }
+
+    </style>
+</head>
+
+<script type='text/javascript' src="jquery-2.1.4.min.js"></script>
+<script>
+    $( function() {
+        $('#calc_1').click( function() {
+            var var1 = $('#var1_1').val();
+            var var2 = $('#var1_2').val();
+            $('#result_1').load( "/servletLab2?queryType=nearest_to_ten" + "&var1=" + var1 + "&var2=" + var2);
+        } );
+
+        $('#calc_2').click( function() {
+            var var1 = $('#var2_1').val();
+            var var2 = $('#var2_2').val();
+            var var3 = $('#var2_3').val();
+            $('#result_2').load( "/servletLab2?queryType=square_eq" + "&var1=" + var1 + "&var2=" + var2 + "&var3=" + var3);
+        } );
+
+        $('#calc_3').click( function() {
+            $('#result_3').load( "/servletLab2?queryType=matrix_8_5");
+        } );
+
+        $('#calc_4').click( function() {
+            $('#result_4').load( "/servletLab2?queryType=matrix_5_8");
+        } );
+        $('#lab3_calc_1').click( function() {
+            var var1 = $('#var_1').val();
+            var var2 = $('#var_2').val();
+            $('#lab3_result_1').load( "/servletLab3?var1=" + var1 + "&var2=" + var2 + "&withNums=false");
+        } );
+
+        $('#lab3_calc_2').click( function() {
+            var var1 = $('#var_1').val();
+            var var2 = $('#var_2').val();
+            $('#lab3_result').load( "/servletLab3?var1=" + var1 + "&var2=" + var2 + "&withNums=true");
+        } );
+    } );
+
+
+</script>
+
+<body>
+
+<div class="layout-center-wrapper">
+
+
+    <ul class="lab_list">
+        <li name="without">
+            <strong>Список лабораторных работ:</strong>
+        </li>
+        <li>
+            <a href="lab2.html">Лабораторная работа №2</a>
+            <a href="https://github.com/Viktoriya-nov/itmo">(исходный код)</a>
+            <p><span class="description">Работа с синтаксисом Java и массивами</span></p>
+        </li>
+        <li>
+            <a href="lab3.html">Лабораторная работа №3</a>
+            <a href="https://github.com/Viktoriya-nov/itmo">(исходный код)</a>
+            <p><span class="description">Работа с таблицей Unicode</span></p>
+        </li>
+        <li>
+            <a href="https://github.com/Viktoriya-nov/itmo-2">Лабораторная работа №4</a>
+            <p><span class="description">Задание с классами</span></p>
+        </li>
+        <li>
+            <a href="https://github.com/Viktoriya-nov/itmo-2">Лабораторная работа №6</a>
+            <p><span class="description">Задание с чтением файла и преобразованием в CSV</span></p>
+        </li>
+    </ul>
+    <div class="avatar-in-profile avatar">
+        <div class="caption white">Vika Novokhatskaya</div>
+        <img src="avatar.png">
+    </div>
+</div>
+
+</body>
+</html>
